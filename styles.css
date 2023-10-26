@@ -1,0 +1,72 @@
+/* Add your styles here */
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+}
+
+.sidebar {
+    width: 20%;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-right: 1px solid #ccc;
+}
+.staff-button {
+  
+    color: red;
+}
+body.dark-mode .staff-button {
+ 
+    color: red !important;
+}
+.tab-buttons button {
+    display: block;
+    margin-bottom: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px; /* Increased padding for larger buttons */
+    cursor: pointer;
+}
+.tab-buttons {
+    max-height: 900px; /* Set a maximum height for the tab container */
+    overflow-y: auto; /* Add a scrollbar for overflow */
+}
+.tab-buttons button:hover {
+    background-color: #eee;
+}
+
+.dark-mode-toggle {
+    margin-top: 20px;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+    background-color: #fff;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+.dark-mode .sidebar {
+    background-color: #222;
+}
+
+.dark-mode .tab-buttons button {
+    background-color: #444;
+    border-color: #555;
+    color: #fff;
+}
+
+.dark-mode .tab-buttons button:hover {
+    background-color: #555;
+}
+
+.dark-mode .content {
+    background-color: #444;
+}
