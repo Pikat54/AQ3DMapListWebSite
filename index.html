@@ -3,24 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Map Viewer</title>
+    <title>AQ3D Map Viewer</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="header">
-        <h1>Map Viewer For AQ3D</h1>
-        <h1>The Red Maps Are for Staff/Devs only</h1>
-        <label for="dark-mode-checkbox">Dark Mode</label>
-        <input type="checkbox" id="dark-mode-checkbox">
+    <header class="app-header">
+        <div class="header-content">
+            <div class="logo">
+                <i class="fas fa-map-marked-alt"></i>
+                <h1>AQ3D Map Viewer</h1>
+            </div>
+            <div class="header-controls">
+                <div class="dark-mode-toggle">
+                    <input type="checkbox" id="dark-mode-checkbox" class="toggle">
+                    <label for="dark-mode-checkbox">
+                        <i class="fas fa-sun"></i>
+                        <i class="fas fa-moon"></i>
+                        <span class="toggle-slider"></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="subheader">
+            <div class="search-bar">
+                <input type="text" id="map-search" placeholder="Search for a map...">
+                <button id="search-button"><i class="fas fa-search"></i></button>
+                <button id="clear-search"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="staff-notice">
+                <i class="fas fa-exclamation-triangle"></i>
+                <span>Red maps are for Staff/Devs only</span>
+            </div>
+        </div>
+    </header>
+
+    <div id="loader" class="loader">
+        <div class="spinner"></div>
+        <p>Loading map data...</p>
     </div>
-    <div class="search-bar">
-        <input type="text" id="map-search" placeholder="Search for a map">
-        <button id="search-button">Search</button>
-    </div>
-    <div class="container">
-        <div class="tab-buttons"></div>
-        <div class="content"></div>
-    </div>
+
+    <main class="container">
+        <aside class="sidebar">
+            <div class="tab-buttons"></div>
+        </aside>
+        <section class="content-area">
+            <div class="content"></div>
+        </section>
+    </main>
+
+    <footer class="app-footer">
+        <p>AQ3D Map Viewer &copy; 2025 | Not affiliated with Artix Entertainment</p>
+    </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
